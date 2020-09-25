@@ -32,7 +32,7 @@ export class Flat {
       }
 
       if (data['attributes']['address'] !== undefined) {
-        this.address =new FlatAddress().deserialize(data['attributes']['address']);
+        this.address = new FlatAddress().deserialize(data['attributes']['address']);
       }
     }
 

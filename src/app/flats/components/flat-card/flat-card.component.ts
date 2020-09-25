@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Flat } from '../../models/flat';
 
 @Component({
   selector: 'app-flat-card',
@@ -7,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FlatCardComponent implements OnInit {
 
+  @Input() flat: Flat;
+  
   constructor() { }
 
   ngOnInit(): void {

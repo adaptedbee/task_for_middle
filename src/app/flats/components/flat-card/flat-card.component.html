@@ -1,17 +1,29 @@
 <section class="flat-card">
-  <h2 class="flat-card__name">3-х комнатная на Минской</h2>
+  <h2
+    *ngIf="flat?.title" 
+    class="flat-card__name">
+    {{flat?.title}}
+  </h2>
 
-  <p class="flat-card__parameter">
-    <b>Комнат:</b> 3
+  <p 
+    *ngIf="flat?.rooms" 
+    class="flat-card__parameter">
+    <b>Комнат:</b> {{flat?.rooms}}
   </p>
-  <p class="flat-card__parameter">
-    <b>Адрес:</b> г. Tyumen, ул. Минская, д. 3a, кв. 123
+  <p 
+    *ngIf="flat?.address"
+    class="flat-card__parameter">
+    <b>Адрес:</b> г. {{flat?.address?.city}}, ул. {{flat?.address?.street}}, д. {{flat?.address?.house}}, кв. {{flat?.address?.room}}
   </p>
-  <p class="flat-card__parameter">
-    <b>Площадь:</b> 134 квм
+  <p 
+    *ngIf="flat?.area && flat?.areaUnit"
+    class="flat-card__parameter">
+    <b>Площадь:</b> {{flat?.area}} {{flat?.areaUnit}}
   </p>
-  <p class="flat-card__parameter">
-    <b>Агент:</b> Дроздов Василий Михайлович
+  <p 
+    *ngIf="flat?.agent"
+    class="flat-card__parameter">
+    <b>Агент:</b> {{flat?.agent?.lastName}} {{flat?.agent?.firstName}} {{flat?.agent?.middleName}}
   </p>
 
   <div class="flat-card__buttons-wrapper">
