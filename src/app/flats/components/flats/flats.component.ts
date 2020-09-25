@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Flat } from '../../models/flat';
+import dataJson from './entities';
 
 @Component({
   selector: 'app-flats',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FlatsComponent implements OnInit {
 
+  flats: Flat[] = [];
+
   constructor() { }
 
   ngOnInit(): void {
+    const data = JSON.parse(dataJson);
+    this.flats = data['response'].map(item => new Flat().deserialize(item));
   }
 
 }
