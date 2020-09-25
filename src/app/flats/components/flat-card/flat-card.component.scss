@@ -1,0 +1,54 @@
+.flat-card {
+  box-sizing: border-box;
+  padding: 16px;
+
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0,0,0,.12);
+}
+
+.flat-card__name {
+  margin-top: 0;
+  margin-bottom: 32px;
+
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: bold;
+}
+
+.flat-card__parameter {
+  margin-top: 0;
+  margin-bottom: 10px;
+
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.flat-card__buttons-wrapper {
+  margin-top: 24px;
+}
+
+.flat-card__button {
+  padding: 0 8px;
+  min-width: 64px;
+
+  font-size: 14px;
+  line-height: 36px;
+  font-weight: bold;
+
+  border: none;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  &:focus {
+    outline: none;
+  }
+
+  &--active {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+}

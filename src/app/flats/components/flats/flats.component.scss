@@ -1,0 +1,22 @@
+.flats {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.flats__headline {
+
+}
+
+.flats__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flats__card-wrapper {
+  width: 30%;
+  margin-right: 5%;
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+}
