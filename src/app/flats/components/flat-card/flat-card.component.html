@@ -13,7 +13,7 @@
   <p 
     *ngIf="flat?.address"
     class="flat-card__parameter">
-    <b>Адрес:</b> г. {{flat?.address?.city}}, ул. {{flat?.address?.street}}, д. {{flat?.address?.house}}, кв. {{flat?.address?.room}}
+    <b>Адрес:</b> <span *ngIf="flat?.address?.city">г. {{flat?.address?.city}}, </span><span *ngIf="flat?.address?.street">ул. {{flat?.address?.street}}, </span><span *ngIf="flat?.address?.house">д. {{flat?.address?.house}}, </span><span *ngIf="flat?.address?.room">кв. {{flat?.address?.room}}</span>
   </p>
   <p 
     *ngIf="flat?.area && flat?.areaUnit"
