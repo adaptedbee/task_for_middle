@@ -9,10 +9,15 @@ import { Flat } from '../../models/flat';
 export class FlatCardComponent implements OnInit {
 
   @Input() flat: Flat;
-  
+  isLiked: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  likeClick() {
+    this.isLiked = !this.isLiked;
   }
 
 }

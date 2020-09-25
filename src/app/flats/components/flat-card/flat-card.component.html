@@ -27,6 +27,11 @@
   </p>
 
   <div class="flat-card__buttons-wrapper">
-    <button class="flat-card__button">LIKE</button>
+    <button
+      (click)="likeClick()" 
+      class="flat-card__button"
+      [class.flat-card__button--active]="isLiked">
+      LIKE
+    </button>
   </div>
 </section>
